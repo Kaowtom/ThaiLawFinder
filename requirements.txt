@@ -10,3 +10,5 @@ selenium==4.19.0
 webdriver_manager==4.0.1
 pythainlp==5.0.2
 deepcut==0.7.0.0
+# numpy==1.24.3
+scipy==1.9.2

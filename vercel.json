@@ -11,5 +11,10 @@
             "src": "/(.*)",
             "dest": "search_app.py"
         }
-    ]
+    ],
+    "functions": {
+        "api/**": {
+            "excludeFiles": "{.next,*.cache,node_modules,public,app}/**"
+        }
+    }
 }
