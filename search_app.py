@@ -16,7 +16,6 @@ from pythainlp.tokenize import word_tokenize
 model_path = 'pythainlp_model/thai2vec.bin'
 
 # from gensim.models import load_word2vec_format
-# import fasttext
 
 # model = load_word2vec_format(model_path, binary=True)
 
