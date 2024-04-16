@@ -12,6 +12,7 @@ import mysql.connector
 
 from features import converter
 from features import content
+
 from pythainlp.tokenize import word_tokenize
 model_path = 'pythainlp_model/thai2vec.bin'
 
@@ -23,6 +24,7 @@ model_path = 'pythainlp_model/thai2vec.bin'
 # model = KeyedVectors.load_word2vec_format(model_path,binary=True)
 from pythainlp import word_vector
 model = word_vector.WordVector(model_name="thai2fit_wv").get_model()
+
 # ELASTIC_PASSWORD = ""
 
 # existing_index_name = 'law-data-reindex-1'
@@ -75,7 +77,6 @@ def findSimilarity(sentence):
     # print("choiceWord", choiceWord)
     return choiceWord
 
-
 @app.route('/')
 def index():
     return render_template('index.html')
@@ -88,6 +89,7 @@ def search():
     page_no = int(request.args.get('page', 1))
     sort = request.args.get('sort', 'section')
     order = request.args.get('order', 'asc')
+    
     choiceWord = findSimilarity(keyword)
     if not keyword.strip() :
         body = {
